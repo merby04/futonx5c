@@ -1,0 +1,57 @@
+<!-- Title for header bar (refer to www/index.html) -->
+<ion-view title="Booking Tempat Futsal">
+  <!-- left button -->
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <!-- right button -->
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-plus-round"></button>
+  </ion-nav-buttons>
+  
+  <!-- ======================
+  MAIN SECTION CONTENT - timeline
+  ====================== -->
+    <h4 class="border-top"><i class="icon ion-stop"></i> Tabs</h4>
+      <ion-content class="has-header gem-ion-content">
+      <!-- Subheader - using ionic's subheader. '.gem-position-relative' is to shift the child icon to the right -->
+          <label class="item item-input item-floating-label">
+                    <span class="input-label">Cari Berdasarkan</span>
+                    <input type="text" placeholder="Cari berdasarkan">
+                </label>
+      <!-- End subheader -->
+
+      <!-- Gemionic Timeline -->
+
+    <div class="list">
+      <div class="item item-divider" ion-affix><i class="icon ion-calendar"></i> Booking Lapang</div>
+      <a class="item item-thumbnail-left item-text-wrap" ng-repeat="futsal in futsals" href="#/app/profile/{{futsal.id}}">
+          <img src="img/lap2.jpg">
+          <h2>{{futsal.name}}</h2>
+          <p>{{futsal.tempat}}</p>
+      </a>
+    </div>
+   
+ 
+    <div class="list">
+      <div class="item item-divider"  ion-affix><i class="icon ion-calendar"></i> Sabado</div>
+        <div class="item item-thumbnail-left item-text-wrap">
+            <img src="img/ag5.jpg">
+            <h2>DINNER CABARET SHOW</h2>
+            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="item item-thumbnail-left item-text-wrap">
+            <img src="img/ag6.jpg">
+            <h2>SABADOS VESSEL</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+        <div class="item item-thumbnail-left item-text-wrap">
+            <img src="img/ag7.jpg">
+            <h2>I LOVE MIGUE PACHANDA</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+         
+  </ion-content>
+</ion-view>

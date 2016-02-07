@@ -1,0 +1,97 @@
+<!-- Title for header bar (refer to www/index.html) -->
+<ion-view title="{{futsals.name}}" >
+  <!-- ======================
+  LEFT SIDE BUTTON
+  ====================== -->
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <!-- ======================
+  RIGHT SIDE BUTTON
+  ====================== -->
+
+  
+
+  <!-- ======================
+  MAIN CONTENT SECTION
+  ====================== -->
+  <ion-content class="has-header gem-ion-content">
+    <!-- ======================
+    GEMIONIC PROFILE SECTION
+    ====================== -->
+    <div class="gem-profile-media">
+      <div class="gem-profile-details">
+        <img src="{{futsals.logo}}" width="96" height="74" alt="" class="gem-circle profile-image">
+        <h3 class="gem-white">{{futsals.name}}</h3>
+        <h5 class="gem-white">{{futsals.tempat}}</h5>
+
+        <!-- ionic row - .profile-stats helps with transparency and white borders -->
+        <div class="row profile-stats">
+          <div class="col stat">
+            <h6 class="gem-white uppercase">Anggota Tim</h6>
+            <h6 class="gem-white">23</h6>
+          </div>
+          <div class="col stat">
+            <h6 class="gem-white uppercase">Anggota</h6>
+            <h6 class="gem-white">6233</h6>
+          </div>
+          <div class="col stat">
+            <h6 class="gem-white uppercase">Rating</h6>
+            <h6 class="gem-white">564</h6>
+          </div>
+        </div>
+        <!-- End Ionic row -->
+      </div>
+
+      <!-- background image -->
+      <img src="img/lap3.jpg" alt="" class="fluid-image profile-background-image">
+    </div>
+    <!-- ======================
+    END GEMIONIC PROFILE SECTION
+    ====================== -->
+         <div class="text-left padding">
+                    
+              <img src="img/lap1.jpg" width="80">
+              <img src="img/lap6.jpg" width="80">
+              <img src="img/lap3.jpg" width="80">
+              <img src="img/lap4.jpg" width="80">
+              <img src="img/lap6.jpg" width="80">  
+                <img src="img/lap1.jpg" width="80"> 
+                        
+          </div>
+  <div class="profile-feed">
+           <div class="item item-divider" ion-affix><i class="icon ion-calendar"></i>
+   Profile
+    </div>
+   <div class="list">
+                <div class="item">                    
+                    <h2>Berdiri</h2>
+                    <p>Februari, 2016</p>
+                </div>
+                <div class="item">                    
+                    <h2>Pemilik</h2>
+                    <p>Dadang Darajatun</p>
+                </div>             
+            </div>
+
+    <!-- Standard Ionic List Markup -->
+
+    <div class="list">
+      <div class="item item-divider" ion-affix><i class="icon ion-calendar"></i>
+    Lapangan
+    </div>
+      <a ng-repeat="lapangan in futsals.lapangan" class="item item-thumbnail-left item-text-wrap" href="#/app/profile">
+          <img src="{{lapangan.image}}">
+          <h2>{{lapangan.nama}}</h2>
+          <p>Jenis :{{lapangan.jenis}}</p>
+          <p>Harga : Rp. {{lapangan.harga}} / Jam</p>   
+      </a>
+      </div>
+   
+    
+    <!-- End Standard Ionic List Markup -->
+
+
+  </ion-content>
+</ion-view>

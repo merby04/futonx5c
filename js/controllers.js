@@ -58,7 +58,8 @@ angular.module('starter.controllers', [])
     $scope.futsals = FutsalDB.all();
 })
 .controller('FutsalCtrl', function($scope, $stateParams,FutsalDB) {
-
     $scope.futsals = FutsalDB.get($stateParams.futsalId);
+})
+.controller('jadwalCtrl', function($scope, $stateParams) {
 });
 s

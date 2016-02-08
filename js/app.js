@@ -47,12 +47,27 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       }
     }
   })
-
+ .state('app.profil-saya', {
+    url: "/profil-saya",
+    views: {
+      'tab-myprofil': {
+        templateUrl: "templates/profil-saya.html"
+      }
+    }
+  })
   .state('app.tim-saya', {
     url: "/tim-saya",
     views: {
       'tab-mytim': {
         templateUrl: "templates/tim-saya.html"
+      }
+    }
+  })
+  .state('app.buat-tim', {
+    url: "/buat-tim",
+    views: {
+      'tab-mytim': {
+        templateUrl: "templates/buat-tim.html"
       }
     }
   })
@@ -75,12 +90,12 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
     }
   })
 
-    .state('app.single', {
-      url: "/playlists/:playlistId",
+    .state('app.jadwal', {
+      url: "/jadwal/:lapanganId",
       views: {
-        'tab-playlists': {
-          templateUrl: "templates/playlist.html",
-          controller: 'PlaylistCtrl'
+        'tab-futsal': {
+          templateUrl: "templates/jadwal.html",
+          controller: 'jadwalCtrl'
         }
       }
     });

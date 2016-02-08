@@ -81,7 +81,7 @@
       <div class="item item-divider" ion-affix><i class="icon ion-calendar"></i>
     Lapangan
     </div>
-      <a ng-repeat="lapangan in futsals.lapangan" class="item item-thumbnail-left item-text-wrap" href="#/app/profile">
+      <a ng-repeat="lapangan in futsals.lapangan" class="item item-thumbnail-left item-text-wrap" href="#/app/jadwal/{{lapangan.id}}">
           <img src="{{lapangan.image}}">
           <h2>{{lapangan.nama}}</h2>
           <p>Jenis :{{lapangan.jenis}}</p>

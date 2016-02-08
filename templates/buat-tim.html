@@ -1,36 +1,19 @@
-<ion-view view-title="Buat tim futsal"> 
-  <ion-content>
-    <div class="news-item">
- <form ng-submit="doLogin()" class="gem-form">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Nama Tim</span>
-          <input type="text" ng-model="loginData.username" placeholder="Username">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Berdiri</span>
-          <input type="password" ng-model="loginData.password" placeholder="Password">
-        </label>
-             <label class="item item-input">
-          <span class="input-label">Berdiri</span>
-          <input type="password" ng-model="loginData.password" placeholder="Password">
-        </label>
-         <label class="item item-input">
-          <span class="input-label">Logo</span>
-          <input type="file" ng-model="loginData.password" placeholder="Password">
-        </label>
-          <label class="item item-input">
-          <span class="input-label">Logo</span>
-          <input type="file" ng-model="loginData.password" placeholder="Password">
-        </label>
+<ion-view view-title="Buat Tim">
+  <ion-content class="padding">
 
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Buat</button>
-        </label>
-       
+  <div class="row responsive-sm padding remvoeBP">
+    <div class="col">
+      <div class="list list-inset removePM">
+        <label class="item item-input"><input type="text" placeholder="Nama Tim"> </label>
+        <label class="item item-input"><input type="text" placeholder="Berdiri"> </label>
       </div>
-    </form>
-   
+      <div class="list list-inset removePM">
+        <label class="item item-input"><B>Masukan logo</B></label>
+        <label class="item item-input"><input type="file" placeholder="logo"></label>
+      </div>
+      <div class="loginButton"><button class="button ion-person button-block button-balanced"> Register </button>  </div>
     </div>
+  </div>
+
   </ion-content>
 </ion-view>

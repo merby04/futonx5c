@@ -23,6 +23,11 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+   .state('starter', {
+      url: "/starter",
+      templateUrl: "templates/start-fullscreen.html",
+      controller: 'AppCtrl'
+    })  
   .state('app', {
     url: "/app",
     abstract: true,
@@ -38,7 +43,6 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         }
       }
     })
-
   .state('app.beranda', {
     url: "/beranda",
     views: {
@@ -100,5 +104,5 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/starter');
 });

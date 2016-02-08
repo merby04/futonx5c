@@ -1,32 +1,37 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout ) {
 
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-
-  // Form data for the login modal
   $scope.loginData = {};
 
   // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
+  $ionicModal.fromTemplateUrl('templates/masuk.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
+  });
+
+  $ionicModal.fromTemplateUrl('templates/daftar.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.signup = modal;
   });
 
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
     $scope.modal.hide();
   };
+  $scope.closeDaftar = function() {
+    $scope.signup.hide();
+  };
 
   // Open the login modal
   $scope.login = function() {
     $scope.modal.show();
+  };
+
+  $scope.daftar = function() {
+    $scope.signup.show();
   };
 
   // Perform the login action when the user submits the login form
@@ -54,12 +59,11 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
-.controller('BookingCtrl', function($scope, $stateParams, FutsalDB) {
+.controller('BookingCtrl', function($scope, $stateParams, FutsalDB ) {
     $scope.futsals = FutsalDB.all();
 })
 .controller('FutsalCtrl', function($scope, $stateParams,FutsalDB) {
     $scope.futsals = FutsalDB.get($stateParams.futsalId);
 })
-.controller('jadwalCtrl', function($scope, $stateParams) {
+.controller('jadwalCtrl', function($scope, $stateParams ) {
 });
-s

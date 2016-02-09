@@ -1,12 +1,19 @@
-<div class="modal" >
-  <ion-header-bar>
-    <h1 class="title">Daftar</h1>
+<div class="modal" style="background: transparent;">
+  <ion-header-bar style="background: transparent;color: #ffffff;">
+    <h1 class="title" style="color: #ffffff;">Daftar</h1>
     <div class="buttons">
       <button class="button button-clear" ng-click="closeDaftar()"><i class="icon ion-close-circled"></i></button>
     </div>
   </ion-header-bar>
-<ion-view view-title="Sign Up" class="loginBg" hide-nav-bar="true" >
-  <ion-content class="padding">
+<div class="tabs-striped tabs-background-positive tabs-color-light">
+  <div class="tabs" style="background: transparent;" >
+    <a class="tab-item" ng-click="login()" style="background: transparent;"><i class="icon ion-unlocked"></i> Login</a>
+    <a class="tab-item  active" ng-click="daftar()" style="background: transparent;"> <i class="icon ion-person"></i> Sing Up </a>
+  </div>
+</div>
+
+<ion-view view-title="Sign Up" class="loginBg" hide-nav-bar="true" style="background: transparent;">
+  <ion-content class="padding" style="background: transparent;">
 
   <div class="row responsive-sm padding remvoeBP">
     <div class="col">
@@ -28,5 +35,6 @@
 
   </ion-content>
 </ion-view>
+
 </div>
 

@@ -27,7 +27,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       url: "/starter",
       templateUrl: "templates/start-fullscreen.html",
       controller: 'AppCtrl'
-    })  
+    }) 
   .state('app', {
     url: "/app",
     abstract: true,

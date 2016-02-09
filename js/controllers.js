@@ -5,13 +5,13 @@ angular.module('starter.controllers', [])
   $scope.loginData = {};
 
   // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/masuk.html', {
+  $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
   });
 
-  $ionicModal.fromTemplateUrl('templates/daftar.html', {
+  $ionicModal.fromTemplateUrl('templates/signup.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.signup = modal;
@@ -28,10 +28,12 @@ angular.module('starter.controllers', [])
   // Open the login modal
   $scope.login = function() {
     $scope.modal.show();
+    $scope.signup.hide();
   };
 
   $scope.daftar = function() {
     $scope.signup.show();
+    $scope.modal.hide();
   };
 
   // Perform the login action when the user submits the login form

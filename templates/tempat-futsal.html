@@ -26,10 +26,10 @@
 
     <div class="list">
       <div class="item item-divider" ion-affix><i class="icon ion-calendar"></i> Booking Lapang</div>
-      <a class="item item-thumbnail-left item-text-wrap" ng-repeat="futsal in futsals" href="#/app/profile/{{futsal.id}}">
+      <a class="item item-thumbnail-left item-text-wrap" ng-repeat="futsal in futsals" href="#/app/profile/{{futsal.futsal_id}}">
           <img src="img/lap2.jpg">
-          <h2>{{futsal.name}}</h2>
-          <p>{{futsal.tempat}}</p>
+          <h2>{{futsal.futsal_name}}</h2>
+          <p>{{futsal.futsal_location}}</p>
       </a>
     </div>
    
@@ -41,16 +41,7 @@
             <h2>DINNER CABARET SHOW</h2>
             <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="item item-thumbnail-left item-text-wrap">
-            <img src="img/ag6.jpg">
-            <h2>SABADOS VESSEL</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-        </div>
-        <div class="item item-thumbnail-left item-text-wrap">
-            <img src="img/ag7.jpg">
-            <h2>I LOVE MIGUE PACHANDA</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+
     </div>
          
   </ion-content>

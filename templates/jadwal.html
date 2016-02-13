@@ -1,65 +1,24 @@
-<!-- Title for header bar (refer to www/index.html) -->
 <ion-view title="Lapangan 1" >
-  <!-- ======================
-  LEFT SIDE BUTTON
-  ====================== -->
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
-
-  <!-- ======================
-  RIGHT SIDE BUTTON
-  ====================== -->
-  <!-- ======================
-  MAIN CONTENT SECTION
-  ====================== -->
   <ion-content class="has-header gem-ion-content">
-    <!-- ======================
-    GEMIONIC PROFILE SECTION
-    ====================== -->
-    <div class="tabs gem-position-static profile-tabs">
-      <a class="tab-item active">
-        <p style="font-size: 0.69em;">Tanggal 1</p>
-      </a>
-      <a class="tab-item">
-        <p style="font-size: 0.69em;">Tanggal 2</p>
-      </a>
-      <a class="tab-item">
-        <p style="font-size: 0.69em;">Tanggal 3</p>
-      </a>
-      <a class="tab-item">
-        <p style="font-size: 0.69em;">Tanggal 4</p>
-      </a>      
-      <a class="tab-item">
-        <p style="font-size: 0.69em;">Tanggal 5</p>
-      </a>
-      <a class="tab-item">
-        <p style="font-size: 0.69em;">Tanggal 6</p>
-      </a>
-      <a class="tab-item">
-        <p style="font-size: 0.69em;">Tanggal 7</p>
-      </a>
+    <div class="tabs gem-position-static profile-tabs">    
+      <a class="tab-item"  ng-repeat="d in tg" ng-click="filter(d.day,tg)" 
+      ng-class="{active:d.day==oke}">
+        <p style="font-size: 1.7em;">{{d.day}}</p>
+      </a>     
     </div>
     <div class="list">
-      <div class="item item-input-inset">
-        <p style="font-size: 0.69em; background: #666;color: #fff;padding: 0px 6px;display: inline-block;border-radius: 3px;">1:00 PM</p>
-        <label class="item-input-wrapper">
-          <input type="text" placeholder="Burudul FC" disabled="disabled">
-        </label>
-        <button class="button button-small button-balanced">
-          TERISI
-        </button>
-      </div>
-      <div class="item item-input-inset">
-        <p style="font-size: 0.69em; background: #666;color: #fff;padding: 0px 6px;display: inline-block;border-radius: 3px;">2:00 PM</p>
-        <label class="item-input-wrapper">
-          <input type="text" placeholder="Masukan Tim">
-        </label>
-        <button class="button button-small button-assertive">
-          Kosong
-        </button>
-      </div>
+      <div class="item item-input-inset" ng-repeat="jdw in jadwals.jadwal | filter:myFilter">
+        <p style="font-size: 0.9em; background: #666;color: #fff;padding: 0px 15px;display: inline-block;border-radius: 6px;">{{jdw.time}}</p>
+        <div ng-if="jdw.team_id!=null">
+       <a class="item item-assertive" href="" style="font-size: 0.9em;margin-left:20px;padding-top:0;padding-bottom:0;" ng-disabled="true">{{jdw.team_id}}</a>  
+        </div>
+        <div ng-if="jdw.team_id==null">    
+                <a class="item item-block item-balanced" href="" style="font-size: 0.9em;margin-left:20px;padding-top:0;padding-bottom:0;">Available</a> 
+        </div>
+      </div>      
     </div>
-
   </ion-content>
 </ion-view>

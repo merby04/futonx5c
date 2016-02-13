@@ -1,5 +1,5 @@
 <!-- Title for header bar (refer to www/index.html) -->
-<ion-view title="{{futsals.name}}" >
+<ion-view title="{{futsals.details.futsal_name}}" >
   <!-- ======================
   LEFT SIDE BUTTON
   ====================== -->
@@ -19,9 +19,9 @@
     ====================== -->
     <div class="gem-profile-media">
       <div class="gem-profile-details">
-        <img src="{{futsals.logo}}" width="96" height="74" alt="" class="gem-circle profile-image">
-        <h3 class="gem-white">{{futsals.name}}</h3>
-        <h5 class="gem-white">{{futsals.tempat}}</h5>
+        <img src="{{futsals.details.futsal_logo}}" width="96" height="74" alt="" class="gem-circle profile-image">
+        <h3 class="gem-white">{{futsals.details.futsal_name}}</h3>
+        <h5 class="gem-white">{{futsals.details.futsal_location}}</h5>
 
         <!-- ionic row - .profile-stats helps with transparency and white borders -->
         <div class="row profile-stats">
@@ -54,7 +54,7 @@
               <img src="img/lap3.jpg" width="80">
               <img src="img/lap4.jpg" width="80">
               <img src="img/lap6.jpg" width="80">  
-                <img src="img/lap1.jpg" width="80"> 
+              <img src="img/lap1.jpg" width="80"> 
                         
           </div>
   <div class="profile-feed">
@@ -63,12 +63,12 @@
     </div>
    <div class="list">
                 <div class="item">                    
-                    <h2>Berdiri</h2>
-                    <p>Februari, 2016</p>
+                    <h2>Maps</h2>
+                    <p>{{futsals.details.futsal_location}}</p>
                 </div>
                 <div class="item">                    
                     <h2>Pemilik</h2>
-                    <p>Dadang Darajatun</p>
+                    <p>{{futsals.details.futsal_owner}}</p>
                 </div>             
             </div>
 
@@ -76,19 +76,14 @@
 
     <div class="list">
       <div class="item item-divider" ion-affix><i class="icon ion-calendar"></i>
-    Lapangan
-    </div>
-      <a ng-repeat="lapangan in futsals.lapangan" class="item item-thumbnail-left item-text-wrap" href="#/app/jadwal/{{lapangan.id}}">
-          <img src="{{lapangan.image}}">
-          <h2>{{lapangan.nama}}</h2>
-          <p>Jenis :{{lapangan.jenis}}</p>
-          <p>Harga : Rp. {{lapangan.harga}} / Jam</p>   
-      </a>
+      Lapangan 
       </div>
-   
-    
-    <!-- End Standard Ionic List Markup -->
-
-
+      <a ng-repeat="lap in futsals.lapangan" class="item item-thumbnail-left item-text-wrap" href="#/app/jadwal/{{lap.futsal_id}}/{{lap.futsal_field_id}}">
+          <img src="{{lap.field_picture}}">
+          <h2>{{lap.field_name}}</h2>
+          <p>Jenis :{{lap.field_length}}</p>
+          <p>Harga : Rp. {{lap.field_price}} / Jam</p>   
+      </a>
+      </div>          
   </ion-content>
 </ion-view>

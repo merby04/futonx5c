@@ -40,7 +40,7 @@
         <!-- Profile Name -->
           <br>
           <div class="col col-75">
-            <h5 class="title">Ricky Merbiansyah</h5>
+            <h5 class="title">{{user.member_name}}</h5>
             <h6 class="action-links">Permata FC</h6>
           </div>
         </div>
@@ -52,6 +52,7 @@
         <ion-item nav-clear menu-close href="#/app/cari-lawan">Cari Lawan</ion-item>
         <ion-item nav-clear menu-close href="#/app/cari-kejuaraan">Cari Kejuaraan</ion-item>
         <ion-item nav-clear menu-close href="#/app/futon-shop">Futon Shop</ion-item>
+        <ion-item nav-clear menu-close ng-click="logout()">Logout</ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>
